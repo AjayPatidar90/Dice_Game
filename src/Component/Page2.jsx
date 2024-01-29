@@ -41,19 +41,19 @@ const Page2 = () => {
           <Numberselector selectedNumber={selectedNumber} setSelectedNumber={setSelectedNumber} />
 
           <Rolldice currentdice={currentdice} rollDice={rollDice}/>
-          <div style={{display:"flex",justifyContent:"center"}}>
+          <div style={{display:"flex",justifyContent:"center"    }}>
                <h1>Click on Dice to roll</h1>
           </div>
 
           <div  style={{display:"flex",justifyContent:"center"}}>
-                <button style={{width:"200px",height:"30px"}} onClick={()=>{
+                <button style={{width:"200px",height:"30px",cursor:"pointer"}} onClick={()=>{
                     
                     setScore("0")
                 }}>Reset Score</button>
           </div>
 
           <div  style={{display:"flex",justifyContent:"center",marginTop:"20px"}}>
-               <button style={{width:"200px",height:"30px",backgroundColor:"black",color:"white"}} onClick={()=>setRule((prev)=>!prev)}>{rule ? "Hide" : "Show"} Rule</button>
+               <button style={{width:"200px",height:"30px",backgroundColor:"black",color:"white",cursor:"pointer"}} onClick={()=>setRule((prev)=>!prev)}>{rule ? "Hide" : "Show"} Rule</button>
               
           </div>
                {rule && <Rule  />}
